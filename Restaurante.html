@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="VICE SLICE — sabores de Leonida, direto de Vice City.">
+    <title>VICE SLICE | O sabor de Leonida</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#inicio" class="logo">
+            VICE<span>SLICE</span>
+            <small>VICE CITY • LEONIDA</small>
+        </a>
+
+        <nav class="nav">
+            <a href="#inicio">INÍCIO</a>
+            <a href="#cardapio">CARDÁPIO</a>
+            <a href="#sobre">SOBRE</a>
+            <a href="#localizacao">LOCALIZAÇÃO</a>
+        </nav>
+
+        <a href="#cardapio" class="header-button">VER CARDÁPIO ↗</a>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow">EST. 1986 — VICE CITY, LEONIDA</span>
+
+                <h1>
+                    O SABOR DE<br>
+                    <span>VICE CITY.</span>
+                </h1>
+
+                <p>
+                    Do calor de Leonida direto para sua mesa.
+                    Comida boa, drinks refrescantes e noites que
+                    você provavelmente não vai esquecer.
+                </p>
+
+                <a href="#cardapio" class="primary-button">
+                    EXPLORAR CARDÁPIO <span>↘</span>
+                </a>
+
+                <div class="hero-location">
+                    <span class="location-dot"></span>
+                    OCEAN DRIVE, VICE CITY — LEONIDA
+                </div>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="sun"></div>
+                <div class="palm palm-one">♣</div>
+                <div class="palm palm-two">♣</div>
+
+                <div class="hero-sticker">
+                    <span>WELCOME TO</span>
+                    <strong>LEONIDA</strong>
+                    <small>THE SUNSHINE STATE</small>
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <span>26°07' N — 80°08' W</span>
+                <span>GOOD FOOD. BAD DECISIONS.</span>
+            </div>
+        </section>
+
+        <section class="city-strip">
+            <span>✦ GUIA LOCAL DE LEONIDA</span>
+            <span>VICE CITY</span>
+            <span>OCEAN DRIVE</span>
+            <span>LEONIDA KEYS</span>
+            <span>✦ O MELHOR DE VICE CITY</span>
+        </section>
+
+        <section class="highlights">
+            <article class="highlight-card">
+                <span class="highlight-icon">☀</span>
+                <div>
+                    <h3>CLIMA DE LEONIDA</h3>
+                    <p>O calor de Leonida em cada detalhe.</p>
+                </div>
+            </article>
+
+            <article class="highlight-card">
+                <span class="highlight-icon">✦</span>
+                <div>
+                    <h3>INGREDIENTES FRESCOS</h3>
+                    <p>Uma seleção de sabores para todos os gostos.</p>
+                </div>
+            </article>
+
+            <article class="highlight-card">
+                <span class="highlight-icon">♫</span>
+                <div>
+                    <h3>BOAS VIBRAÇÕES</h3>
+                    <p>Boa comida combina com boas histórias.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="menu-section" id="cardapio">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">O QUE TEM NA CASA?</span>
+                    <h2>NOSSO <span>CARDÁPIO.</span></h2>
+                </div>
+
+                <p>
+                    Dos clássicos americanos às sobremesas.
+                </p>
+            </div>
+
+            <div class="menu-toolbar">
+                <form class="search-form" id="searchForm">
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Buscar um prato ou bebida..."
+                        autocomplete="off"
+                    >
+                    <button type="submit" aria-label="Pesquisar">⌕</button>
+                </form>
+
+                <div class="filter-buttons">
+                    <button class="filter-button active" data-filter="todos">TUDO</button>
+                    <button class="filter-button" data-filter="comida">COMIDAS</button>
+                    <button class="filter-button" data-filter="sobremesa">SOBREMESAS</button>
+                    <button class="filter-button" data-filter="drink">DRINKS</button>
+                </div>
+            </div>
+
+            <div class="menu-stats">
+                <div class="stat">
+                    <strong id="totalItens">--</strong>
+                    <span>ITENS NO CARDÁPIO</span>
+                </div>
+
+                <div class="stat">
+                    <strong id="totalComidas">--</strong>
+                    <span>COMIDAS</span>
+                </div>
+
+                <div class="stat">
+                    <strong id="totalSobremesas">--</strong>
+                    <span>SOBREMESAS</span>
+                </div>
+
+                <div class="stat">
+                    <strong id="totalDrinks">--</strong>
+                    <span>DRINKS</span>
+                </div>
+            </div>
+
+            <div class="menu-message" id="menuMessage" aria-live="polite">
+                Preparando o cardápio de Leonida...
+            </div>
+
+            <div class="menu-grid" id="menuGrid"></div>
+
+            <p class="api-note">
+            </p>
+        </section>
+
+        <section class="about-section" id="sobre">
+            <div class="about-decoration">
+                <span class="about-number">305</span>
+                <span class="about-label">THE 305 AREA CODE</span>
+            </div>
+
+            <div class="about-content">
+                <span class="eyebrow">MAIS QUE UM RESTAURANTE</span>
+                <h2>VIVA O <span>ESTILO LEONIDA.</span></h2>
+
+                <p>
+                    No coração de Vice City, o VICE SLICE é o ponto de
+                    encontro de quem procura boa comida e um ambiente
+                    descontraído. Inspirado pelo clima tropical,
+                    pelas luzes da cidade e pela energia de Leonida.
+                </p>
+
+
+                <a href="#localizacao" class="text-link">
+                    ENCONTRE A GENTE ↗
+                </a>
+            </div>
+        </section>
+
+        <section class="location-section" id="localizacao">
+            <div>
+                <span class="eyebrow">VOCÊ SABE ONDE NOS ENCONTRAR</span>
+                <h2>OCEAN DRIVE,<br><span>VICE CITY.</span></h2>
+            </div>
+
+            <div class="location-details">
+                <p>
+                    <strong>ENDEREÇO</strong>
+                    Ocean Drive, Vice City, Leonida, FL
+                </p>
+
+                <p>
+                    <strong>HORÁRIO</strong>
+                    Todos os dias • 11h às 02h
+                </p>
+
+                <p>
+                    <strong>AMBIENTE</strong>
+                    Comida, música e boas vibrações.
+                </p>
+
+                <a
+                    href="https://mapgenie.io/grand-theft-auto-6/maps/leonida"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="map-button">
+                MARCAR NO MAPA ↗
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="#inicio" class="logo">
+            VICE<span>SLICE</span>
+            <small>VICE CITY • LEONIDA</small>
+        </a>
+
+        <p>GOOD FOOD. BAD DECISIONS.</p>
+
+        <span>© 2026 VICE SLICE — PROJETO ACADÊMICO FICTÍCIO</span>
+    </footer>
+
+</body>
+</html>
