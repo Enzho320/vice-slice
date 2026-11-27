@@ -1,0 +1,42 @@
+
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .header, .hero, .about, .menu-section,
+    .location, footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 380px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
